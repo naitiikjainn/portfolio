@@ -11,7 +11,6 @@ body {
     line-height: 1.6;
     color: #333;
 }
-
 header {
     background-color: #333;
     color: white;
@@ -133,7 +132,6 @@ h2 {
 .profiles-list li {
     margin: 10px 0;
 }
-
 .profiles-list li a {
     text-decoration: none;
     font-size: 1.2rem;
@@ -160,31 +158,6 @@ footer {
     padding: 1rem;
     text-align: center;
 }
-#footer {
-    background-color: #333;
-    color: #fff;
-    padding: 2rem 0;
-    text-align: center;
-}
-
-#footer h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-}
-
-#footer p {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-}
-
-#footer a {
-    color: #0073b1;
-    text-decoration: none;
-}
-
-#footer a:hover {
-    text-decoration: underline;
-}
 
 .footer-content {
     max-width: 1200px;
@@ -197,59 +170,46 @@ footer {
         margin: 10px 0;
     }
 
-    .hero h1 {
+    .intro-section h1 {
         font-size: 2.5rem;
     }
 
-    .hero p {
+    .intro-section p {
         font-size: 1.2rem;
     }
 
     #skills ul {
         flex-direction: column;
     }
-    .hero-content {
+    .intro-content {
         flex-direction: column;
         text-align: center;
     }
 
-    .hero-image {
+    .intro-photo {
         margin-top: 20px;
     }
 
-    .hero h1 {
+    .intro-section h1 {
         font-size: 2rem;
     }
 
-    .hero p {
+    .intro-section p {
         font-size: 1.2rem;
     }
 
-    .hero-image img {
+    .intro-photo img {
         width: 150px;
         height: 150px;
     }
 }
-.social-icon {
-    width: 30px;
-    height: 30px;
-    vertical-align: middle;
-    margin-left: 10px;
-}
-a:hover .social-icon {
-    opacity: 0.8;
-}
-.social-icon {
-    width: 30px;
-    height: 30px;
-    vertical-align: middle;
-    margin: 0 10px;
+.icons {
+    color: black;
+    font-size: 30px;
+    margin-right: 10px;
+    transition: color 0.3s ease;
 }
 
 .competitive-profiles a {
     margin: 5px;
-}
-
-a:hover .social-icon {
-    opacity: 0.8;
 }
