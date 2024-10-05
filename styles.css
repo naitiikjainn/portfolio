@@ -56,7 +56,6 @@ nav ul li a {
     display: flex;
     justify-content: center;
 }
-
 .intro-photo img {
     max-width: 100%;
     height: auto;
@@ -149,9 +148,6 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
-}
 footer {
     background-color: #333;
     color: white;
@@ -204,12 +200,9 @@ footer {
     }
 }
 .icons {
-    color: black;
     font-size: 30px;
-    margin-right: 10px;
-    transition: color 0.3s ease;
+    margin-right: 15px;
 }
-
 .competitive-profiles a {
     margin: 5px;
 }
