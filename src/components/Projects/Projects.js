@@ -36,14 +36,17 @@ function Projects() {
             <ProjectCard
               imgPath={editor}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/naitiikjainn"
-              demoLink="https://editor.soumya-it.tech/"              
+              title="CodePlay"
+              description="Real-time Collaboration: Architected a high-performance recursive editor using Yjs CRDTs and
+WebSockets, enabling conflict-free multi-user coding with < 50ms latency.
+AI & LeetCode Integration: Built a custom Chrome Extension to bridge LeetCode cookies for seamless
+problem submission and integrated Google Gemini 2.5 Flash for context-aware code explanations."
+              ghLink="https://github.com/naitiikjainn/Code-Editor"
+              demoLink="https://code-editor-phi-two.vercel.app/"
             />
           </Col>
 
-          
+
 
 
         </Row>

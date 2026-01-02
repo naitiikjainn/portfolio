@@ -1,21 +1,22 @@
 html {
-  --section-background-color: linear-gradient(
-    to bottom left,
-    rgba(17, 16, 16, 0.582),
-    rgba(12, 8, 24, 0.904)
-  );
+  --section-background-color: transparent;
+  /* Rely on body gradient for smooth flow */
+  --image-gradient: linear-gradient(to bottom left,
+      rgba(17, 16, 16, 0.678),
+      rgba(12, 10, 22, 0.863));
+  --imp-text-color: #d400ff;
+  /* Neon Pink/Purple */
+  --glow-color: rgba(212, 0, 255, 0.6);
+}
 
-  --image-gradient: linear-gradient(
-    to bottom left,
-    rgba(17, 16, 16, 0.678),
-    rgba(12, 10, 22, 0.863)
-  );
-
-  --imp-text-color: #c770f0;
+::selection {
+  background: var(--imp-text-color);
+  color: #fff;
 }
 
 .purple {
   color: var(--imp-text-color) !important;
+  text-shadow: 0 0 10px var(--glow-color);
 }
 
 button:focus {
@@ -32,7 +33,7 @@ button:focus {
   width: 100%;
   height: 100%;
   z-index: 999999;
-  background-color: #0c0513;
+  background-color: #05010d;
   background-image: url(./Assets/pre.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -42,49 +43,45 @@ button:focus {
   opacity: 0;
 }
 
-/* #preloader-none {
-  opacity: 0;
-  display: none;
-} */
-
 #no-scroll {
   overflow: hidden;
   height: 100vh;
 }
 
 /* --------- */
-/*Scrollbar   */
+/* Scrollbar   */
 /* --------- */
 
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 8px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #2d1950;
+  background: #0f0518;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(178, 121, 216, 0.959);
+  background: linear-gradient(180deg, #be50f4, #6610f2);
   border-radius: 12px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(222, 130, 235, 0.911);
-  border-radius: 12px;
+  background: #d400ff;
+  box-shadow: 0 0 10px #d400ff;
 }
 
 /* --------- */
 /* Navbar Section  */
 /* --------- */
 .sticky {
-  background-color: #1b1a2ea9 !important;
+  background-color: rgba(27, 26, 46, 0.6) !important;
   transition: all 0.3s ease-out 0s !important;
   box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
   backdrop-filter: blur(15px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .navbar {
@@ -151,10 +148,12 @@ button:focus {
     font-size: 1.4rem !important;
     background-color: #181a27 !important;
   }
+
   .navbar-nav .nav-item a::after {
     display: none !important;
   }
 }
+
 .navbar-brand {
   color: rgb(250, 250, 250) !important;
 }
@@ -196,14 +195,15 @@ button:focus {
   content: "";
   position: relative;
   display: block;
-  height: 5px;
+  height: 4px;
   width: 0;
   border-radius: 16px;
-  background: #c95bf5;
+  background: var(--imp-text-color);
   bottom: 1px;
   left: 0;
   z-index: -1;
   transition: all 0.3s ease-out 0s;
+  box-shadow: 0 0 8px var(--glow-color);
 }
 
 .navbar-nav .nav-item a:hover::after {
@@ -214,10 +214,14 @@ button:focus {
 /* Home section */
 /* --------- */
 .wave {
-  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.1s; /* Change to speed up or slow down */
-  animation-iteration-count: infinite; /* Never stop waving :) */
-  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  animation-name: wave-animation;
+  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.1s;
+  /* Change to speed up or slow down */
+  animation-iteration-count: infinite;
+  /* Never stop waving :) */
+  transform-origin: 70% 70%;
+  /* Pivot around the bottom-left palm */
   display: inline-block;
 }
 
@@ -225,28 +229,38 @@ button:focus {
   0% {
     transform: rotate(0deg);
   }
+
   10% {
     transform: rotate(14deg);
-  } /* The following five values can be played with to make the waving more or less extreme */
+  }
+
+  /* The following five values can be played with to make the waving more or less extreme */
   20% {
     transform: rotate(-8deg);
   }
+
   30% {
     transform: rotate(14deg);
   }
+
   40% {
     transform: rotate(-4deg);
   }
+
   50% {
     transform: rotate(10deg);
   }
+
   60% {
     transform: rotate(0deg);
-  } /* Reset for the last half to pause */
+  }
+
+  /* Reset for the last half to pause */
   100% {
     transform: rotate(0deg);
   }
 }
+
 #tsparticles {
   position: fixed !important;
   background-repeat: no-repeat !important;
@@ -294,6 +308,7 @@ button:focus {
   color: #be6adf !important;
   font-weight: 600 !important;
 }
+
 .Typewriter__cursor {
   font-size: 2.4em !important;
   color: #b562d6 !important;
@@ -305,6 +320,7 @@ button:focus {
     font-weight: 500 !important;
     position: absolute !important;
   }
+
   .Typewriter__cursor {
     display: none !important;
   }
@@ -410,8 +426,9 @@ button:focus {
   background-color: rgb(10, 4, 22);
   bottom: 0 !important;
   padding-top: 10px !important;
-  padding-bottom: 8px !important ;
+  padding-bottom: 8px !important;
 }
+
 .footer-copywright {
   text-align: center !important;
 }
@@ -437,6 +454,7 @@ button:focus {
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
 }
+
 .footer-icons {
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
@@ -446,6 +464,7 @@ button:focus {
 .blockquote-footer {
   color: #a588c0 !important;
 }
+
 /* --------- */
 /* Projects */
 /* --------- */
@@ -467,15 +486,19 @@ button:focus {
 .project-card-view {
   box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
   color: white !important;
-  background-color: transparent !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.125) !important;
   opacity: 0.9 !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
+  border-radius: 15px !important;
 }
+
 .project-card-view:hover {
   transform: scale(1.02) !important;
-  overflow: hidden !important;
-  box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
+  box-shadow: 0 0 20px var(--glow-color) !important;
+  border-color: var(--imp-text-color) !important;
 }
 
 .blog-card {
@@ -487,11 +510,14 @@ button:focus {
 }
 
 .blog-card-view {
-  background-color: transparent !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(10px) !important;
   box-shadow: 0 3px 3px 2px rgba(145, 77, 161, 0.459) !important;
   color: white !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
+  border: 1px solid rgba(255, 255, 255, 0.125) !important;
+  border-radius: 15px !important;
 }
 
 .blog-link {
@@ -505,8 +531,8 @@ button:focus {
 
 .blog-card-view:hover {
   transform: scale(1.02) !important;
-  overflow: hidden !important;
-  box-shadow: 0 3px 3px 5px rgba(155, 88, 173, 0.65) !important;
+  box-shadow: 0 0 20px var(--glow-color) !important;
+  border-color: var(--imp-text-color) !important;
 }
 
 .card-img-top {
@@ -532,10 +558,12 @@ button:focus {
   background-color: #6d20c5d7 !important;
   border-color: #6d20c5d7 !important;
 }
+
 .btn:focus {
   outline: none !important;
   box-shadow: none !important;
 }
+
 .project-heading {
   color: white !important;
   font-size: 2.3em !important;
@@ -563,17 +591,19 @@ button:focus {
   margin: 15px !important;
   padding: 10px 20px !important;
   opacity: 0.93 !important;
-  outline: 1.7px solid rgba(200, 137, 230, 0.637) !important;
+  border: 1px solid rgba(255, 255, 255, 0.125) !important;
   vertical-align: middle !important;
   text-align: center !important;
-  border-radius: 24px !important;
-  box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
+  border-radius: 5px !important;
+  box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
   overflow: hidden !important;
   transition: all 0.4s ease 0s !important;
   width: fit-content !important;
   cursor: pointer !important;
   transition: outline-color 0.3s, outline-width 0.3s, transform 0.3s;
   color: white;
+  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .tech-icons-text {
@@ -592,8 +622,10 @@ button:focus {
 .tech-icons:hover {
   transform: scale(1.05) !important;
   overflow: hidden !important;
-  outline: 2.2px solid rgba(197, 115, 230, 0.883) !important;
+  border: 1px solid var(--imp-text-color) !important;
+  box-shadow: 0 0 15px var(--glow-color) !important;
 }
+
 .tech-icon-images {
   height: 1.6rem;
   line-height: 1.6 !important;
@@ -616,6 +648,7 @@ button:focus {
     padding-top: 0 !important;
   }
 }
+
 /* --------- */
 /* Resume */
 /* --------- */
@@ -653,6 +686,7 @@ button:focus {
     padding-left: 15px !important;
   }
 }
+
 .resume .resume-title {
   font-size: 2em;
   font-weight: 700;
@@ -729,10 +763,12 @@ button:focus {
   animation-fill-mode: forwards;
   animation-duration: 0.85s;
 }
+
 @keyframes likeAnimation {
   0% {
     transform: scale(1.5);
   }
+
   100% {
     transform: scale(1);
   }
@@ -756,9 +792,11 @@ button:focus {
   background-color: #a24dd386 !important;
   border-color: #a24dd386 !important;
 }
+
 .fork-btn-inner::after {
   display: none !important;
 }
+
 /* CP Heatmap custom styles */
 
 .cp-heatmap-wrapper .react-calendar-heatmap .color-empty {
@@ -792,18 +830,23 @@ button:focus {
   border-radius: 4px;
   display: inline-block;
 }
+
 .cf-empty {
   fill: #1b1030;
 }
+
 .cf-1 {
   fill: #7b2cbf;
 }
+
 .cf-2 {
   fill: #9d4edd;
 }
+
 .cf-3 {
   fill: #c77dff;
 }
+
 .cf-4 {
   fill: #e0aaff;
 }
@@ -813,11 +856,14 @@ button:focus {
   fill: #aaa;
   font-size: 8px;
 }
+
 /* Stats container */
 .cp-wrapper {
-  width: fit-content;          /* 🔥 magic line */
+  width: fit-content;
+  /* 🔥 magic line */
   margin-left: auto;
-  margin-right: auto;          /* center whole block */
+  margin-right: auto;
+  /* center whole block */
 }
 
 /* Stats box now auto matches heatmap width */
